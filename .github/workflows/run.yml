@@ -2,9 +2,9 @@ name: FGO Login System
 
 on:
   schedule:
-    - cron: "30 03 * * *"
-    - cron: "30 13 * * *"
-    - cron: "30 17 * * *"
+    - cron: "17 03 * * *"
+    - cron: "17 13 * * *"
+    - cron: "17 17 * * *"
   workflow_dispatch:
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
 
       - name: Execute main script 1
         run: |
-          if [[ "${{ github.event.schedule }}" == "30 03 * * *" ]]; then
+          if [[ "${{ github.event.schedule }}" == "17 03 * * *" ]]; then
               python3 main.py --Free_Gacha
           else
               python3 main.py
